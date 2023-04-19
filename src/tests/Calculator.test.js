@@ -117,7 +117,11 @@ describe('Calculator', () => {
     fireEvent.click(button2);
     fireEvent.click(buttonEquals);
     fireEvent.click(buttonClear);
-    expect(runningTotal.textContent).toEqual('0');
+    fireEvent.click(button1);
+    fireEvent.click(buttonAdd);
+    fireEvent.click(button2);
+    fireEvent.click(buttonEquals);
+    expect(runningTotal.textContent).toEqual('5');
   })
 
 })
